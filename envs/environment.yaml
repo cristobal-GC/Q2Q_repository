@@ -6,5 +6,6 @@ name: Q2Q_renewables
 channels:
 - conda-forge
 dependencies:
-- python
+- python>=3.10
+- pypsa>=0.32.1
 
