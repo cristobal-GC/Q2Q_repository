@@ -36,6 +36,13 @@ for carrier in carrier_list:
         for year in year_dic[domain]:
             
             for clustering in clustering_list:
+            
+                file_q2q = f'q2q_{carrier}_{domain}_{year}_{clustering}.pkl'
+                
+                if os.path.exists(path_outputs+file_q2q):
+                    print(f'Skipping existing file: {file_q2q}')
+                    continue
+
 
                 ##### Load input data
                 file_input = path_data + 'modelled_data/' + f'{carrier}_{domain}_{year}_{clustering}.csv'
@@ -51,9 +58,10 @@ for carrier in carrier_list:
 
 
                 ##### Save transform
-                file_q2q = f'q2q_{carrier}_{domain}_{year}_{clustering}'
-                with open(f'{path_outputs}{file_q2q}.pkl', 'wb') as f:
+                with open(path_outputs+file_q2q, 'wb') as f:
                     pickle.dump(q2q_transform, f)
+                    
+                print(f'Created q2q function: {file_q2q}')
 
 
 
