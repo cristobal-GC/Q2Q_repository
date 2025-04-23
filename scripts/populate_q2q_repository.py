@@ -7,7 +7,7 @@ import pickle
 ##### Import local functions
 sys.path.append(os.path.abspath(os.path.join('..')))
 import funs
-#################### Populate q2q repository
+
 
 
 ########## Parameters
@@ -16,8 +16,10 @@ carrier_list = ['onwind', 'solar']
 
 domain_list = ['iberia', 'europe']
 
-year_dic = {'iberia': list(range(2016, 2024)),
-            'europe': [2019, 2020, 2023]
+year_dic = {'iberia': [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023], # 2024 doesn't run
+            'europe': [1996, 2010, 2012, 2013, 2019, 2020, 2023], # sarah3-era5
+            'onwind': [2011, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024], # historical data
+            'solar': [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024], # historical data
             }
 
 clustering_list = ['NUTS2', 'NUTS3']
@@ -27,13 +29,22 @@ path_data = '../data/'
 path_outputs = '../q2q_repository/'
 
 
+
 ########## Loop
 
 for carrier in carrier_list:
 
     for domain in domain_list:
 
-        for year in year_dic[domain]:
+        # To define year_list, consider de intersection for the years of the specific domain, and all the carriers
+        year_dic_local = {k: v for k, v in year_dic.items() if k in [domain]+carrier_list}
+        
+        year_list = set.intersection(*[set(year_list_local) for year_list_local in year_dic_local.values()])
+
+        print(f'year_list = {year_list}')
+
+
+        for year in year_list:
             
             for clustering in clustering_list:
             
