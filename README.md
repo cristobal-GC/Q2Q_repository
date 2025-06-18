@@ -35,9 +35,9 @@ The names of the files in this repository sometimes include labels that provide 
 
 The main conclusions of the analyses contained in this repository are as follows:
 
-- For **onshore windpower**, the Q2Q transformation is essential for correcting the underestimation of the wind capacity factor (CF). The recommended normalisation scheme is **v2**.
+- For **onshore windpower**, the Q2Q transformation is **essential** for correcting the underestimation of the wind capacity factor (CF). The recommended normalisation scheme is **v2**.
 
-- For **solar PV**, the Q2Q transformation only makes minor improvements, as the CF is already estimated fairly accurately by the model. The recommended normalisation scheme is **v1**.
+- For **solar PV**, the Q2Q transformation only makes **minor improvements**, as the CF is already estimated fairly accurately by the model. The recommended normalisation scheme is **v1**.
 
 Note that these recommendations differ from those in the [seminal paper](https://doi.org/10.1016/j.esr.2025.101764) due to methodological changes implemented in [PyPSA-Eur](https://github.com/PyPSA/pypsa-eur) between versions v0.0.0 and v2025.04.0 of PyPSA-Spain.
 
