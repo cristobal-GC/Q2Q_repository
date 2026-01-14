@@ -1,37 +1,42 @@
 # Q2Q_repository
 
-Estimating hourly capacity factors for renewable technologies can be challenging, as errors arising from simplifications and limitations may occur at several stages of the process.
+Estimating hourly generation time series for renewable technologies can be challenging. A common strategy, usually referred to as *physical approach*, consists on combining outputs from weather models, like wind speed or solar radiation, with a model of the  conversion processes taking place in a wind turbine or solar PV pannel. In this case, errors in the obtained generation time series may arise from hypotheses and simplifications throughout the entire conversion process (such as biases in the weather data, the spatio-temporal discretisation, simplified assumptions on the conversion model, etc.).
 
-In [PyPSA-Spain](https://github.com/cristobal-GC/pypsa-spain), a proposal consisting on Q2Q transformations between historical and modelled time series were implemented, see the [seminal paper](https://doi.org/10.1016/j.esr.2025.101764) for details
+In [PyPSA-Spain](https://github.com/cristobal-GC/pypsa-spain), a methodology to reduce such errors was proposed and implemented, see the [seminal paper](https://doi.org/10.1016/j.esr.2025.101764) for details. The methodology, referred to as **quantile-to-quantile (Q2Q) transform**, relies on a statistical mapping between historical and modelled hourly capacity factors (hCF) for solar and wind power technologies. The main advantage and limitation of this approach is its statistical nature, as all the errors are handled all together regardless its nature (advantage), but no information regarding the source of error is obtained (limitation).
 
-This repository provides comprehensive material to help you understand the approach. It also contains a set of ready-to-use Q2Q transformations, as well as evaluation analyses to help you select the most appropriate one. Please note that this material is only valid for studies focused on Spain. However, a similar methodology can be followed for other countries, provided that the necessary historical data is available.
+This repository provides comprehensive material to analyse the Q2Q performance under varying configuration parameters. As a by-product, it also contains a set of ready-to-use Q2Q transforms and scripts to reproduce the results. Note that this material is only valid for analyses focused on Spain. However, a similar methodology can be followed for other countries, provided that the necessary historical hCF time series are available.
 
+
+
+## Content
 
 The contents of this repository are as follows:
 
-- **data/** folder contains historical and modelled generation time series for onshore wind and solar PV technologies in peninsular Spain over several years. Data with historical installed capacities are also included. The modelled data were obtained using PyPSA-Spain under various configurations.
+- **data/** contains historical and modelled hourly generation time series at country level for onshore wind and solar PV technologies for several years. Data with historical installed capacities to derive hCF time series are also included. Historical data were retrieved from [esios](https://api.esios.ree.es/). Modelled data were generated with PyPSA-Spain, under various configurations.
 
-- **figs/** contains figures of all the Q2Q transforms included in the repository, as well as the results of performance analyses.
+- **env/** contains a python environment to run the scripts contained in this repository.
 
-- **notebooks/** includes some illustrative Jupyter notebooks in the form of tutorials.
+- **figs/** contains a folder with figures of the Q2Q transforms included in the repository, and an evaluation folder with figures showing different performance assessments of the Q2Q transforms.
 
-- **q2q_repository/** contains the set of precomputed Q2Q transformations.
+- **funs/** contais auxiliary functions required by the scripts.
 
-- The rest of the folders contain support material.
+- **notebooks/** includes some tutorials in the form of Jupyter notebooks.
 
+- **pypsa-spain** contains the configuration files of the different runs of the model to compute all the modelled generation time series.
 
+- **q2q_repository/** contains the set of Q2Q transformations obtained in the considered cases. They are ready-to-use in PyPSA-Spain (after considering the potential impacts of assumming different configuration parameters as those employed to obtain the selected Q2Q transforms).
 
-The names of the files in this repository sometimes include labels that provide information about the configuration used to create the file.
-
-- **europe/iberia** refers to the meteorological cutout:
-    - *europe* is a cutout with a spatial resolution of 0.3 degrees. Wind speed data are from the ECMWF ERA5 reanalysis dataset, and solar radiation data are from the CMSAF SARAH-3 solar surface radiation dataset.
-    - *iberia* is a cutout with a spatial resolution of 0.3 degrees. Both wind speed and solar radiation data are from ERA5.
-    
-- **NUTS 2/3** is the clustering level of the network.
-
-- **v1, v2, v3** refer to the normalisation scheme employed to build the Q2Q transformation.
+- **scripts/** contains python scripts to reproduce the contents of the repository.
 
 
+
+## Methodology
+
+(tbd)
+
+
+
+## Conclusions
 
 The main conclusions of the analyses contained in this repository are as follows:
 

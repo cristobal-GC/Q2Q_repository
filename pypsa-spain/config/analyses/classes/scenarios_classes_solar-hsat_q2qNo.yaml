@@ -1,0 +1,36 @@
+
+
+classes_2_solar-hsat_q2qNo:
+  renewable:
+    onwind:
+      resource_classes: 2
+    solar-hsat:
+      resource_classes: 2
+
+classes_3_solar-hsat_q2qNo:
+  renewable:
+    onwind:
+      resource_classes: 3
+    solar-hsat:
+      resource_classes: 3
+
+classes_4_solar-hsat_q2qNo:
+  renewable:
+    onwind:
+      resource_classes: 4
+    solar-hsat:
+      resource_classes: 4
+
+classes_5_solar-hsat_q2qNo:
+  renewable:
+    onwind:
+      resource_classes: 5
+    solar-hsat:
+      resource_classes: 5
+
+classes_6_solar-hsat_q2qNo:
+  renewable:
+    onwind:
+      resource_classes: 6
+    solar-hsat:
+      resource_classes: 6

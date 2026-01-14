@@ -1,0 +1,36 @@
+
+
+classes_2_solar_q2qNo:
+  renewable:
+    onwind:
+      resource_classes: 2
+    solar:
+      resource_classes: 2
+
+classes_3_solar_q2qNo:
+  renewable:
+    onwind:
+      resource_classes: 3
+    solar:
+      resource_classes: 3
+
+classes_4_solar_q2qNo:
+  renewable:
+    onwind:
+      resource_classes: 4
+    solar:
+      resource_classes: 4
+
+classes_5_solar_q2qNo:
+  renewable:
+    onwind:
+      resource_classes: 5
+    solar:
+      resource_classes: 5
+
+classes_6_solar_q2qNo:
+  renewable:
+    onwind:
+      resource_classes: 6
+    solar:
+      resource_classes: 6

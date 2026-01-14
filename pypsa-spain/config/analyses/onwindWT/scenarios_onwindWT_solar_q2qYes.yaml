@@ -1,0 +1,185 @@
+
+
+onwindWT_1500_solar_q2qv1:
+  pypsa_spain:
+    q2q_transform:
+      enable: true
+      onwind: data_ES/q2q/onwindWT/q2q_onwind_onwindWT_1500_v1.pkl
+      solar: data_ES/q2q/onwindWT/q2q_solar_onwindWT_1500_v1.pkl
+  renewable:
+    onwind:
+      resource:
+        turbine: Suzlon_S82_1.5_MW
+
+onwindWT_1500_solar_q2qv2:
+  pypsa_spain:
+    q2q_transform:
+      enable: true
+      onwind: data_ES/q2q/onwindWT/q2q_onwind_onwindWT_1500_v2.pkl
+      solar: data_ES/q2q/onwindWT/q2q_solar_onwindWT_1500_v2.pkl
+  renewable:
+    onwind:
+      resource:
+        turbine: Suzlon_S82_1.5_MW
+
+onwindWT_1500_solar_q2qv3:
+  pypsa_spain:
+    q2q_transform:
+      enable: true
+      onwind: data_ES/q2q/onwindWT/q2q_onwind_onwindWT_1500_v3.pkl
+      solar: data_ES/q2q/onwindWT/q2q_solar_onwindWT_1500_v3.pkl
+  renewable:
+    onwind:
+      resource:
+        turbine: Suzlon_S82_1.5_MW
+
+
+
+
+onwindWT_1750_solar_q2qv1:
+  pypsa_spain:
+    q2q_transform:
+      enable: true
+      onwind: data_ES/q2q/onwindWT/q2q_onwind_onwindWT_1750_v1.pkl
+      solar: data_ES/q2q/onwindWT/q2q_solar_onwindWT_1750_v1.pkl
+  renewable:
+    onwind:
+      resource:
+        turbine: Vestas_V66_1750kW
+
+onwindWT_1750_solar_q2qv2:
+  pypsa_spain:
+    q2q_transform:
+      enable: true
+      onwind: data_ES/q2q/onwindWT/q2q_onwind_onwindWT_1750_v2.pkl
+      solar: data_ES/q2q/onwindWT/q2q_solar_onwindWT_1750_v2.pkl
+  renewable:
+    onwind:
+      resource:
+        turbine: Vestas_V66_1750kW
+
+onwindWT_1750_solar_q2qv3:
+  pypsa_spain:
+    q2q_transform:
+      enable: true
+      onwind: data_ES/q2q/onwindWT/q2q_onwind_onwindWT_1750_v3.pkl
+      solar: data_ES/q2q/onwindWT/q2q_solar_onwindWT_1750_v3.pkl
+  renewable:
+    onwind:
+      resource:
+        turbine: Vestas_V66_1750kW
+
+
+
+
+onwindWT_2000_solar_q2qv1:
+  pypsa_spain:
+    q2q_transform:
+      enable: true
+      onwind: data_ES/q2q/onwindWT/q2q_onwind_onwindWT_2000_v1.pkl
+      solar: data_ES/q2q/onwindWT/q2q_solar_onwindWT_2000_v1.pkl
+  renewable:
+    onwind:
+      resource:
+        turbine: Vestas_V80_2MW_gridstreamer
+
+onwindWT_2000_solar_q2qv2:
+  pypsa_spain:
+    q2q_transform:
+      enable: true
+      onwind: data_ES/q2q/onwindWT/q2q_onwind_onwindWT_2000_v2.pkl
+      solar: data_ES/q2q/onwindWT/q2q_solar_onwindWT_2000_v2.pkl
+  renewable:
+    onwind:
+      resource:
+        turbine: Vestas_V80_2MW_gridstreamer
+
+onwindWT_2000_solar_q2qv3:
+  pypsa_spain:
+    q2q_transform:
+      enable: true
+      onwind: data_ES/q2q/onwindWT/q2q_onwind_onwindWT_2000_v3.pkl
+      solar: data_ES/q2q/onwindWT/q2q_solar_onwindWT_2000_v3.pkl
+  renewable:
+    onwind:
+      resource:
+        turbine: Vestas_V80_2MW_gridstreamer
+
+
+
+
+
+onwindWT_2300_solar_q2qv1:
+  pypsa_spain:
+    q2q_transform:
+      enable: true
+      onwind: data_ES/q2q/onwindWT/q2q_onwind_onwindWT_2300_v1.pkl
+      solar: data_ES/q2q/onwindWT/q2q_solar_onwindWT_2300_v1.pkl
+  renewable:
+    onwind:
+      resource:
+        turbine: Siemens_SWT_2300kW
+
+onwindWT_2300_solar_q2qv2:
+  pypsa_spain:
+    q2q_transform:
+      enable: true
+      onwind: data_ES/q2q/onwindWT/q2q_onwind_onwindWT_2300_v2.pkl
+      solar: data_ES/q2q/onwindWT/q2q_solar_onwindWT_2300_v2.pkl
+  renewable:
+    onwind:
+      resource:
+        turbine: Siemens_SWT_2300kW
+
+onwindWT_2300_solar_q2qv3:
+  pypsa_spain:
+    q2q_transform:
+      enable: true
+      onwind: data_ES/q2q/onwindWT/q2q_onwind_onwindWT_2300_v3.pkl
+      solar: data_ES/q2q/onwindWT/q2q_solar_onwindWT_2300_v3.pkl
+  renewable:
+    onwind:
+      resource:
+        turbine: Siemens_SWT_2300kW
+
+
+
+
+onwindWT_4000_solar_q2qv1:
+  pypsa_spain:
+    q2q_transform:
+      enable: true
+      onwind: data_ES/q2q/onwindWT/q2q_onwind_onwindWT_4000_v1.pkl
+      solar: data_ES/q2q/onwindWT/q2q_solar_onwindWT_4000_v1.pkl
+  renewable:
+    onwind:
+      resource:
+        turbine: NREL_ReferenceTurbine_2020ATB_4MW
+
+onwindWT_4000_solar_q2qv2:
+  pypsa_spain:
+    q2q_transform:
+      enable: true
+      onwind: data_ES/q2q/onwindWT/q2q_onwind_onwindWT_4000_v2.pkl
+      solar: data_ES/q2q/onwindWT/q2q_solar_onwindWT_4000_v2.pkl
+  renewable:
+    onwind:
+      resource:
+        turbine: NREL_ReferenceTurbine_2020ATB_4MW
+
+onwindWT_4000_solar_q2qv3:
+  pypsa_spain:
+    q2q_transform:
+      enable: true
+      onwind: data_ES/q2q/onwindWT/q2q_onwind_onwindWT_4000_v3.pkl
+      solar: data_ES/q2q/onwindWT/q2q_solar_onwindWT_4000_v3.pkl
+  renewable:
+    onwind:
+      resource:
+        turbine: NREL_ReferenceTurbine_2020ATB_4MW
+
+
+
+
+
+

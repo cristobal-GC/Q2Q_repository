@@ -1,0 +1,78 @@
+
+#################### Reference case
+REF:
+  ISA: ISA_43
+  cutout: cutout_europe2023
+  cluster: cluster_NUTS3
+  classes: classes_1
+  onwindWT: onwindWT_3000
+
+
+
+#################### Config options
+solartype_list:
+- solar
+- solar-hsat
+
+
+
+##### Colors
+colors:
+  historical: "#000000"   # negro
+  q2qNo: "#008000"        # verde (0, 0.5, 0)
+  q2qv1: "#3399FF"        # azul celeste (0.2, 0.6, 1)
+  q2qv2: "#1A66CC"        # azul medio (0.1, 0.4, 0.8)
+  q2qv3: "#66B2E6"        # azul suave (0.4, 0.7, 0.9)
+
+
+
+
+#################### Analyses
+
+REF_list:
+- REF
+
+ISA_list:
+#- ISA_4
+#- ISA_43   ##### REF
+#- ISA_432
+#- ISA_4321
+#- ISA_43210
+
+cutout_list:
+- cutout_europe2019
+- cutout_europe2020
+- cutout_europe2023   ##### REF
+#- cutout_iberia2015
+#- cutout_iberia2016
+#- cutout_iberia2017
+#- cutout_iberia2018
+- cutout_iberia2019
+- cutout_iberia2020
+#- cutout_iberia2021
+#- cutout_iberia2022
+- cutout_iberia2023
+
+cluster_list:
+- cluster_NUTS2
+- cluster_NUTS3   ##### REF
+- cluster_15
+- cluster_50
+- cluster_100
+
+classes_list:
+- classes_1   ##### REF
+- classes_2
+- classes_3
+- classes_4
+- classes_5
+- classes_6
+
+onwindWT_list:
+- onwindWT_1500   # Suzlon_S82_1.5_MW
+- onwindWT_1750   # Vestas_V66_1750kW
+- onwindWT_2000   # Vestas_V80_2MW_gridstreamer
+- onwindWT_2300   # Siemens_SWT_2300kW
+- onwindWT_3000   # Vestas_V112_3MW                     ##### REF
+- onwindWT_4000   # NREL_ReferenceTurbine_2020ATB_4MW
+

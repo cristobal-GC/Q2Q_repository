@@ -1,0 +1,191 @@
+
+
+classes_2_solar-hsat_q2qv1:
+  pypsa_spain:
+    q2q_transform:
+      enable: true
+      onwind: data_ES/q2q/classes/q2q_onwind_classes_2_v1.pkl
+      solar-hsat: data_ES/q2q/classes/q2q_solar-hsat_classes_2_v1.pkl
+  renewable:
+    onwind:
+      resource_classes: 2
+    solar-hsat:
+      resource_classes: 2
+
+classes_2_solar-hsat_q2qv2:
+  pypsa_spain:
+    q2q_transform:
+      enable: true
+      onwind: data_ES/q2q/classes/q2q_onwind_classes_2_v2.pkl
+      solar-hsat: data_ES/q2q/classes/q2q_solar-hsat_classes_2_v2.pkl
+  renewable:
+    onwind:
+      resource_classes: 2
+    solar-hsat:
+      resource_classes: 2
+
+classes_2_solar-hsat_q2qv3:
+  pypsa_spain:
+    q2q_transform:
+      enable: true
+      onwind: data_ES/q2q/classes/q2q_onwind_classes_2_v3.pkl
+      solar-hsat: data_ES/q2q/classes/q2q_solar-hsat_classes_2_v3.pkl
+  renewable:
+    onwind:
+      resource_classes: 2
+    solar-hsat:
+      resource_classes: 2
+
+
+
+classes_3_solar-hsat_q2qv1:
+  pypsa_spain:
+    q2q_transform:
+      enable: true
+      onwind: data_ES/q2q/classes/q2q_onwind_classes_3_v1.pkl
+      solar-hsat: data_ES/q2q/classes/q2q_solar-hsat_classes_3_v1.pkl
+  renewable:
+    onwind:
+      resource_classes: 3
+    solar-hsat:
+      resource_classes: 3
+
+classes_3_solar-hsat_q2qv2:
+  pypsa_spain:
+    q2q_transform:
+      enable: true
+      onwind: data_ES/q2q/classes/q2q_onwind_classes_3_v2.pkl
+      solar-hsat: data_ES/q2q/classes/q2q_solar-hsat_classes_3_v2.pkl
+  renewable:
+    onwind:
+      resource_classes: 3
+    solar-hsat:
+      resource_classes: 3
+
+classes_3_solar-hsat_q2qv3:
+  pypsa_spain:
+    q2q_transform:
+      enable: true
+      onwind: data_ES/q2q/classes/q2q_onwind_classes_3_v3.pkl
+      solar-hsat: data_ES/q2q/classes/q2q_solar-hsat_classes_3_v3.pkl
+  renewable:
+    onwind:
+      resource_classes: 3
+    solar-hsat:
+      resource_classes: 3
+
+
+
+classes_4_solar-hsat_q2qv1:
+  pypsa_spain:
+    q2q_transform:
+      enable: true
+      onwind: data_ES/q2q/classes/q2q_onwind_classes_4_v1.pkl
+      solar-hsat: data_ES/q2q/classes/q2q_solar-hsat_classes_4_v1.pkl
+  renewable:
+    onwind:
+      resource_classes: 4
+    solar-hsat:
+      resource_classes: 4
+
+classes_4_solar-hsat_q2qv2:
+  pypsa_spain:
+    q2q_transform:
+      enable: true
+      onwind: data_ES/q2q/classes/q2q_onwind_classes_4_v2.pkl
+      solar-hsat: data_ES/q2q/classes/q2q_solar-hsat_classes_4_v2.pkl
+  renewable:
+    onwind:
+      resource_classes: 4
+    solar-hsat:
+      resource_classes: 4
+
+classes_4_solar-hsat_q2qv3:
+  pypsa_spain:
+    q2q_transform:
+      enable: true
+      onwind: data_ES/q2q/classes/q2q_onwind_classes_4_v3.pkl
+      solar-hsat: data_ES/q2q/classes/q2q_solar-hsat_classes_4_v3.pkl
+  renewable:
+    onwind:
+      resource_classes: 4
+    solar-hsat:
+      resource_classes: 4
+
+
+
+classes_5_solar-hsat_q2qv1:
+  pypsa_spain:
+    q2q_transform:
+      enable: true
+      onwind: data_ES/q2q/classes/q2q_onwind_classes_5_v1.pkl
+      solar-hsat: data_ES/q2q/classes/q2q_solar-hsat_classes_5_v1.pkl
+  renewable:
+    onwind:
+      resource_classes: 5
+    solar-hsat:
+      resource_classes: 5
+
+classes_5_solar-hsat_q2qv2:
+  pypsa_spain:
+    q2q_transform:
+      enable: true
+      onwind: data_ES/q2q/classes/q2q_onwind_classes_5_v2.pkl
+      solar-hsat: data_ES/q2q/classes/q2q_solar-hsat_classes_5_v2.pkl
+  renewable:
+    onwind:
+      resource_classes: 5
+    solar-hsat:
+      resource_classes: 5
+
+classes_5_solar-hsat_q2qv3:
+  pypsa_spain:
+    q2q_transform:
+      enable: true
+      onwind: data_ES/q2q/classes/q2q_onwind_classes_5_v3.pkl
+      solar-hsat: data_ES/q2q/classes/q2q_solar-hsat_classes_5_v3.pkl
+  renewable:
+    onwind:
+      resource_classes: 5
+    solar-hsat:
+      resource_classes: 5
+
+
+
+classes_6_solar-hsat_q2qv1:
+  pypsa_spain:
+    q2q_transform:
+      enable: true
+      onwind: data_ES/q2q/classes/q2q_onwind_classes_6_v1.pkl
+      solar-hsat: data_ES/q2q/classes/q2q_solar-hsat_classes_6_v1.pkl
+  renewable:
+    onwind:
+      resource_classes: 6
+    solar-hsat:
+      resource_classes: 6
+
+classes_6_solar-hsat_q2qv2:
+  pypsa_spain:
+    q2q_transform:
+      enable: true
+      onwind: data_ES/q2q/classes/q2q_onwind_classes_6_v2.pkl
+      solar-hsat: data_ES/q2q/classes/q2q_solar-hsat_classes_6_v2.pkl
+  renewable:
+    onwind:
+      resource_classes: 6
+    solar-hsat:
+      resource_classes: 6
+
+classes_6_solar-hsat_q2qv3:
+  pypsa_spain:
+    q2q_transform:
+      enable: true
+      onwind: data_ES/q2q/classes/q2q_onwind_classes_6_v3.pkl
+      solar-hsat: data_ES/q2q/classes/q2q_solar-hsat_classes_6_v3.pkl
+  renewable:
+    onwind:
+      resource_classes: 6
+    solar-hsat:
+      resource_classes: 6
+
+

@@ -1,0 +1,94 @@
+# -*- coding: utf-8 -*-
+# SPDX-FileCopyrightText: Contributors to PyPSA-Eur <https://github.com/pypsa/pypsa-eur>
+#
+# SPDX-License-Identifier: MIT
+
+# This file is used to define the scenarios that are run by snakemake. Each entry on the first level is a scenario. Each scenario can contain configuration overrides with respect to the config/config.yaml settings.
+#
+# Example
+#
+# custom-scenario: # name of the scenario
+#   electricity:
+#       renewable_carriers: [wind, solar] # override the list of renewable carriers
+
+cutout_europe2019_solar_q2qNo:
+  pypsa_spain:
+    update_elec_capacities:
+      carriers_to_update:
+        onwind: data_ES/esios/esios_onwind_capacity_2019.csv
+        solar: data_ES/esios/esios_solar_capacity_2019.csv
+  snapshots:
+    start: "2019-01-01"
+    end: "2020-01-01"
+  electricity:
+    powerplants_filter: (DateOut >= 2019 or DateOut != DateOut)
+  atlite:
+    default_cutout: europe-2019-sarah3-era5
+
+
+
+cutout_europe2020_solar_q2qNo:
+  pypsa_spain:
+    update_elec_capacities:
+      carriers_to_update:
+        onwind: data_ES/esios/esios_onwind_capacity_2020.csv
+        solar: data_ES/esios/esios_solar_capacity_2020.csv
+  snapshots:
+    start: "2020-01-01"
+    end: "2021-01-01"
+  electricity:
+    powerplants_filter: (DateOut >= 2020 or DateOut != DateOut)
+  atlite:
+    default_cutout: europe-2020-sarah3-era5
+
+
+
+cutout_iberia2019_solar_q2qNo:
+  pypsa_spain:
+    update_elec_capacities:
+      carriers_to_update:
+        onwind: data_ES/esios/esios_onwind_capacity_2019.csv
+        solar: data_ES/esios/esios_solar_capacity_2019.csv
+  snapshots:
+    start: "2019-01-01"
+    end: "2020-01-01"
+  electricity:
+    powerplants_filter: (DateOut >= 2019 or DateOut != DateOut)
+  atlite:
+    default_cutout: iberia-2019-era5
+
+
+
+cutout_iberia2020_solar_q2qNo:
+  pypsa_spain:
+    update_elec_capacities:
+      carriers_to_update:
+        onwind: data_ES/esios/esios_onwind_capacity_2020.csv
+        solar: data_ES/esios/esios_solar_capacity_2020.csv
+  snapshots:
+    start: "2020-01-01"
+    end: "2021-01-01"
+  electricity:
+    powerplants_filter: (DateOut >= 2020 or DateOut != DateOut)
+  atlite:
+    default_cutout: iberia-2020-era5
+
+
+
+cutout_iberia2023_solar_q2qNo:
+  pypsa_spain:
+    update_elec_capacities:
+      carriers_to_update:
+        onwind: data_ES/esios/esios_onwind_capacity_2023.csv
+        solar: data_ES/esios/esios_solar_capacity_2023.csv
+  snapshots:
+    start: "2023-01-01"
+    end: "2024-01-01"
+  electricity:
+    powerplants_filter: (DateOut >= 2023 or DateOut != DateOut)
+  atlite:
+    default_cutout: iberia-2023-era5
+
+
+
+
