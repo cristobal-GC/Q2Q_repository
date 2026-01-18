@@ -3,7 +3,7 @@
 
 
 
-### Overview
+## Overview
 
 This repository provides data, scripts and ready-to-use **quantile-to-quantile (Q2Q) transforms** to improve hourly generation time series for **onshore wind and solar PV** in **PyPSA-Spain**.
 
@@ -11,7 +11,7 @@ This repository provides data, scripts and ready-to-use **quantile-to-quantile (
 
 
 
-### Background and Motivation
+## Background and Motivation
 
 Estimating hourly generation time series for renewable technologies is challenging. A common *physical approach* combines weather model outputs (e.g. wind speed or solar radiation) with simplified conversion models for wind turbines or solar PV panels. Errors may arise at multiple stages of this process, including biases in weather data, spatial and temporal discretisation, and simplified conversion assumptions.
 
@@ -24,7 +24,7 @@ Its main **limitation** is that it does not provide information on the origin of
 
 
 
-### What This Repository Provides
+## What This Repository Provides
 
 This repository allows users to:
 
@@ -38,7 +38,7 @@ All data and results are **specific to Spain**. The same methodology can be appl
 
 
 
-### Repository Structure
+## Repository Structure
 
 * `data/`
   Historical and modelled hourly generation time series at country level (except Canary Islands) for onshore wind and solar PV, together with historical installed capacities.
@@ -69,7 +69,7 @@ All data and results are **specific to Spain**. The same methodology can be appl
 
 
 
-### Analyses and Scenarios
+## Analyses and Scenarios
 
 To assess the robustness of the Q2Q transform, one **Reference analysis** and four **sensitivity analyses** were performed. Each analysis includes several scenarios in which only one parameter is modified relative to the reference.
 
@@ -93,7 +93,7 @@ Each analysis is performed twice, assuming either `solar` or `solar-hsat` techno
 
 
 
-### Methodological Workflow
+## Methodological Workflow
 
 For each analysis, the following steps are applied:
 
@@ -117,15 +117,15 @@ For each analysis, the following steps are applied:
 
 
 
-### Key Results and Recommendations
+## Key Results and Recommendations
 
 * **Onshore wind**
   Q2Q correction is **essential** to address the systematic underestimation of capacity factors when using ERA5 data.
-  The recommended normalisation scheme is **v2**.
+  The recommended normalisation scheme is `v2`.
 
 * **Solar PV**
   Q2Q provides only **minor improvements**, as capacity factors are already well estimated.
-  The recommended normalisation scheme is **v1**.
+  The recommended normalisation scheme is `v1`.
 
 * When applying a Q2Q transform from this repository to new PyPSA-Spain scenarios, modelling assumptions should match as closely as possible those used to generate the transform.
   Some parameters (e.g. clustering, especially for solar PV) have limited impact, while others (weather year, number of wind classes, turbine model) are critical.
@@ -138,7 +138,9 @@ For each analysis, the following steps are applied:
 
 
 
-### Further Information and Contributions
+## Further Information and Contributions
 
 If you find errors, have suggestions, or want to contribute, please use the [Issues](https://github.com/cristobal-GC/Q2Q_repository/issues) section or open a [Pull Request](https://github.com/cristobal-GC/Q2Q_repository/pulls).
 
+
+If you find errors, have suggestions for improvement, or would like to contribute, please open an [issues](https://github.com/cristobal-GC/Q2Q_repository/issues) or submit a [Pull Request](https://github.com/cristobal-GC/Q2Q_repository/pulls).
