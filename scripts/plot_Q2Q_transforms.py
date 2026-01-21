@@ -1,9 +1,4 @@
 #################### Run this script to generate plots of the Q2Q transformations
-#
-# Hay que habilitar las 3 versiones, que son las que se crean, y comentar la v0
-#
-# Este script NO COMPRUEBA si la figura existe, la sobreescribe
-
 
 
 import pandas as pd
@@ -25,18 +20,14 @@ import funs
 
 
 
-
-
 #################### Parameters
 
-##### Analysis case
+##### Analysis case. Comment all but one
 # analysis = 'REF'
 # analysis = 'cutout'
 # analysis = 'cluster'
 # analysis = 'onwindWT'
 analysis = 'classes'
-
-
 
 
 
@@ -71,12 +62,12 @@ for carrier in carrier_list:
 
         ##### Path to save the figures
         output_path = f'../figs/q2q_transforms/{analysis_local}/'
-        ### Comprueba que path to save existe, crear en caso contrario
+        ### Check that it exists, create it if it does not
         if not os.path.exists(output_path):
             os.makedirs(output_path)
 
 
-        ### Crear figura con una fila y 3 columnas de subplots
+        ### Plot figure with 1 row and 3 columns
         fig, axes = plt.subplots(1, 3, figsize=(18, 6))
 
         for idx, q2q in enumerate(['q2qv1', 'q2qv2', 'q2qv3']):
@@ -90,7 +81,7 @@ for carrier in carrier_list:
                 x_values = np.linspace(0, 1, 1000)
                 y_values = q2q_transform(x_values)
 
-                ax = axes[idx]  # Seleccionar el subplot correspondiente
+                ax = axes[idx]  # Select subplot
 
                 ax.plot(x_values, y_values)
                 ax.plot([0, 1], [0, 1], linestyle='--', color='black', alpha=0.25)
@@ -100,7 +91,7 @@ for carrier in carrier_list:
                 ax.set_ylabel('output')
                 ax.grid(True, linestyle='--', linewidth=0.5, color='black', alpha=0.25)
 
-        ### Guardar figura conjunta
+        ### save figure
         file_output = f'q2q_{carrier}_{case_local}.jpg'
         fig.tight_layout()
         print(f'Saving (and perhaps overwriting) figure {file_output}')

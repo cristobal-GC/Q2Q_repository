@@ -1,9 +1,4 @@
 #################### Run this script to generate Q2Q transformations from modelled and historical data
-#
-# Hay que habilitar las 3 versiones, que son las que se crean, y comentar la v0
-#
-# Este script COMPRUEBA antes de guardar que el archivo no existe, para evitar sobreescribir los ya existentes
-
 
 
 import pandas as pd
@@ -23,13 +18,12 @@ import funs
 
 
 
-
-
 #################### Parameters
 
 data_path = '../data/'
 
-##### Analysis case
+
+##### Analysis case. Comment all but one
 # analysis = 'REF'
 # analysis = 'cutout'
 # analysis = 'cluster'
@@ -38,16 +32,12 @@ analysis = 'classes'
 
 
 
-
-
 #################### Derived parameters
 
 output_path = f'../q2q_repository/{analysis}/'
-### Comprueba que existe, crear en caso contrario
+### Check that it exists, create it if it does not
 if not os.path.exists(output_path):
     os.makedirs(output_path)
-
-
 
 
 
@@ -80,7 +70,7 @@ for carrier in carrier_list:
             year = int(dic_analyses['REF']['cutout'][-4:])
 
 
-        ##### Define 'carrier_target', que es el historical data que se coge: vale 'solar' cuando carrier es 'solar-hsat'
+        ##### Define 'carrier_target', (historical data, it takes 'solar' for carrier 'solar-hsat')
         if carrier == 'solar-hsat':
             carrier_target = 'solar'
         else:

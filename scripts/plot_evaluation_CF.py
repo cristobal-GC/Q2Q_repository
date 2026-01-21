@@ -1,7 +1,4 @@
 #################### Run this script to generate plots for evaluating the modelled data: CFs
-#
-# Este script NO COMPRUEBA si la figura existe, la sobreescribe
-
 
 
 import pandas as pd
@@ -22,15 +19,13 @@ import funs
 
 
 
-
-
 #################### Parameters
 
 ##### Define analyses to consider (except REF)
 analysis_vector = [
-                   #'cutout',
-                   #'cluster',
-                   #'onwindWT',
+                   'cutout',
+                   'cluster',
+                   'onwindWT',
                    'classes',
                    ]
 

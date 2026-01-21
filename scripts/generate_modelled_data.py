@@ -1,13 +1,11 @@
-#################### Run this script to generate modelled time series from resolved pypsa networks
+#################### Run this script to generate modelled time series from resolved PyPSA-Spain networks
 #
 #
-# La primera vez que se corre (PASO 2) es para obtener los datos modelados según pypsa-eur, por tanto solo con una columna: 'q2qNo'
+# The first time it is run (STEP 2) is to obtain the data modeled according to pypsa-eur, therefore with only one column: ‘q2qNo’.
 #
-# Con esto se pueden generar las Q2Q transforms, que luego se emplean para correr este script por segunda vez ya con 4 columnas, (1 sin q2q, 3 con q2q)
+# This can be used to generate the Q2Q transformations, which are then used to run this script a second time with four columns (one without q2q, three with q2q).
 #
 #
-# Este script NO COMPRUEBA antes de guardar que el archivo no existe, por lo que sobreescribe. Esto es necesario para que en el paso 6 sobreescriba el output del paso 2, ampliando el dataframe con las columnas de q2qX
-
 
 
 import pandas as pd
@@ -28,7 +26,7 @@ with open('../analyses.yaml', 'r') as f:
 pypsa_path = '../pypsa-spain/'
 
 
-##### Analysis case
+##### Analysis case. Comment all but one
 #analysis = 'REF'
 #analysis = 'cutout'
 #analysis = 'cluster'
@@ -36,28 +34,22 @@ pypsa_path = '../pypsa-spain/'
 analysis = 'classes'
 
 
-
-
-
 ##### Set q2q list. Comment all but one
-#q2q_list = ['q2qNo']                                 # PASO 2
-q2q_list = ['q2qNo', 'q2qv1', 'q2qv2', 'q2qv3']       # PASO 6
+#q2q_list = ['q2qNo']                                 # STEP 2
+q2q_list = ['q2qNo', 'q2qv1', 'q2qv2', 'q2qv3']       # STEP 6
 
 
 
 #################### Derived parameters
 
 output_path = f'../data/modelled_data/{analysis}/'
-### Comprueba que existe, crear en caso contrario
+### Check that it exists, create it if it does not
 if not os.path.exists(output_path):
     os.makedirs(output_path)
 
 
 
-
-
-#################### Loop para generar los archivos csv con las series temporales
-
+#################### Loop to generate CSV files with time series
 
 for solartype in dic_analyses['solartype_list']:
 

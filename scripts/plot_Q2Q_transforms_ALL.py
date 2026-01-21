@@ -1,9 +1,4 @@
 #################### Run this script to generate plots of the Q2Q transformations
-#
-# Hay que habilitar las 3 versiones, que son las que se crean, y comentar la v0
-#
-# Este script NO COMPRUEBA si la figura existe, la sobreescribe
-
 
 
 import pandas as pd
@@ -25,17 +20,13 @@ import funs
 
 
 
-
-
 #################### Parameters
 
-##### Analysis case (except REF)
+##### Analysis case. Comment all but one
 # analysis = 'cutout'
 # analysis = 'cluster'
 # analysis = 'onwindWT'
 analysis = 'classes'
-
-
 
 
 
@@ -54,7 +45,7 @@ for carrier in carrier_list:
         continue
 
 
-    # Crear figura con una fila y 3 columnas de subplots (una por cada q2q)
+    ### Plot figure with 1 row and 3 columns
     fig, axes = plt.subplots(1, 3, figsize=(18, 6))
 
 
@@ -75,7 +66,7 @@ for carrier in carrier_list:
 
         ##### Path to save the figures
         output_path = f'../figs/q2q_transforms/{analysis}/'
-        ### Comprueba que path to save existe, crear en caso contrario
+        ### Check that it exists, create it if it does not
         if not os.path.exists(output_path):
             os.makedirs(output_path)
 
@@ -105,11 +96,11 @@ for carrier in carrier_list:
             except FileNotFoundError:
                 print(f'Archivo no encontrado: {file_q2q}, se omite.')
 
-    # Agregar leyendas si hay varios casos
+    # Add legends
     for ax in axes:
         ax.legend(loc='best', fontsize='small')
 
-    # Guardar la figura por carrier
+    # Save figure
     file_output = f'q2q_{carrier}_{analysis}_ALL.jpg'
     fig.tight_layout()
     print(f'Saving (and perhaps overwriting) figure {file_output}')
